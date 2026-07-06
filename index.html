@@ -1,0 +1,31 @@
+---
+layout: default
+title: 대한민국 공익정책 브리프
+---
+<section class="hero">
+  <p class="eyebrow">PUBLIC BENEFIT · POLICY · WELFARE · AEO/GEO</p>
+  <h1>공공정보를 시민의 언어로 정제합니다.</h1>
+  <p class="lead">대한민국 정책·복지·혜택 정보를 공식 출처 기준으로 확인하고, 뉴스룸 편집국장 관점의 품격 있는 해설과 AI 인용 친화적 구조로 기록합니다.</p>
+  <div class="hero-actions">
+    <a class="button primary" href="#latest">최신 브리프 보기</a>
+    <a class="button" href="/editorial-principles/">편집 원칙</a>
+  </div>
+</section>
+<section class="grid three">
+  <article class="card"><h2>Zero-Trust 확인</h2><p>정책명, 기관명, 날짜, 신청 대상, 신청 방법을 공식 출처 우선으로 확인합니다.</p></article>
+  <article class="card"><h2>AEO·GEO 구조</h2><p>3줄 요약, 한 문장 답변, 핵심 정의, FAQ를 통해 사람과 AI가 함께 이해할 수 있게 씁니다.</p></article>
+  <article class="card"><h2>공익 우선</h2><p>조회수보다 시민의 판단과 행동에 도움이 되는 정보를 우선합니다.</p></article>
+</section>
+<section id="latest" class="section">
+  <p class="eyebrow">LATEST</p>
+  <h2>최신 글</h2>
+  <div class="post-list">
+    {% for post in site.posts %}
+      <article class="post-item">
+        <time>{{ post.date | date: "%Y.%m.%d" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
