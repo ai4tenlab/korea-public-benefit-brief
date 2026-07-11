@@ -5,7 +5,7 @@ date: 2026-07-11 05:30:00 +0900
 author: 4TENLAB Lucky
 description: "7월 6일부터 시작된 공공생리대 지원 시범사업의 이용 대상, 설치 장소 확인 방법, 이용 전 주의점을 공식 보도자료 기준으로 정리했다."
 categories: [policy, welfare, public-service]
-image: /assets/images/thumbnails/2026-07-11-public-period-products-pilot.png
+image: /assets/images/thumbnails/2026-07-11-public-period-products-pilot-kdrama-v2.png
 image_alt: "공공시설 안내판 앞에서 위생용품 지원 정보를 확인하는 시민을 그린 공익정책 브리프 썸네일"
 ---
 
