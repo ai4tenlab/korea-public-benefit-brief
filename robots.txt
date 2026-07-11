@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://ai4tenlab.github.io/korea-public-benefit-brief/sitemap.xml
