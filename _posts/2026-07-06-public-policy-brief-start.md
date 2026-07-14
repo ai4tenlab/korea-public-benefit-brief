@@ -2,6 +2,8 @@
 title: "대한민국 공익정책 브리프를 시작합니다: 정책·복지·혜택 정보를 시민의 언어로 기록하는 이유"
 description: "정책·복지·혜택 정보를 공식 출처 기준으로 확인하고, AEO·GEO 친화적 구조로 시민에게 도움이 되는 공익 블로그를 시작합니다."
 categories: [editorial]
+image: "/assets/images/thumbnails/2026-07-06-public-policy-brief-start.png"
+image_alt: "공식 출처 문서를 검토하는 시민 편집자를 담은 대한민국 공익정책 브리프 창간 썸네일"
 ---
 
 ## 3줄 요약
