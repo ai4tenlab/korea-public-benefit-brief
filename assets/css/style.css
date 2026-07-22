@@ -54,6 +54,13 @@ img, video, iframe { max-width: 100%; height: auto; }
   letter-spacing: -.035em;
   text-decoration: none;
 }
+.brand small {
+  color: var(--muted);
+  font-size: .68em;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+}
 nav { display: flex; align-items: center; gap: clamp(14px, 2.6vw, 30px); overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
 nav::-webkit-scrollbar { display: none; }
 nav a { color: rgba(29, 29, 31, .78); font-size: .82rem; font-weight: 600; text-decoration: none; }

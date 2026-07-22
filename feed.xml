@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>대한민국 공익정책 브리프</title>
-    <description>정책·복지·혜택 정보를 시민이 이해하고 활용할 수 있도록 정제하는 공익형 AEO·GEO 블로그입니다.</description>
+    <title>정책과 시민 | Korea Public Benefit Brief</title>
+    <description>정책이 시민의 삶에 닿는 순간을 공식 출처로 확인하고 설명하는 공익정책 브리프</description>
     <link>https://ai4tenlab.github.io/korea-public-benefit-brief/</link>
     <atom:link href="https://ai4tenlab.github.io/korea-public-benefit-brief/feed.xml" rel="self" type="application/rss+xml" />
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 22 Jul 2026 10:51:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 14:17:17 +0900</lastBuildDate>
     
     <item>
       <title>다자녀 가구 고속도로 통행료 할인: 3자녀 이상은 7월 22일부터 사전등록</title>
@@ -153,7 +153,7 @@
     </item>
     
     <item>
-      <title>대한민국 공익정책 브리프를 시작합니다: 정책·복지·혜택 정보를 시민의 언어로 기록하는 이유</title>
+      <title>정책과 시민을 시작합니다: 공식 출처로 시민의 삶에 닿는 정책을 읽는 이유</title>
       <description>정책·복지·혜택 정보를 공식 출처 기준으로 확인하고, AEO·GEO 친화적 구조로 시민에게 도움이 되는 공익 블로그를 시작합니다.</description>
       <link>https://ai4tenlab.github.io/korea-public-benefit-brief/editorial/2026/07/06/public-policy-brief-start/</link>
       <guid isPermaLink="true">https://ai4tenlab.github.io/korea-public-benefit-brief/editorial/2026/07/06/public-policy-brief-start/</guid>
