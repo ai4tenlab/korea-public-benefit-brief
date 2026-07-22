@@ -12,3 +12,21 @@ layout: default
   {% endif %}
   {{ content }}
 </article>
+
+{% assign related_count = 0 %}
+<section class="related-posts" aria-labelledby="related-posts-title">
+  <div class="related-heading"><p class="eyebrow">KEEP READING</p><h2 id="related-posts-title">이 글과 함께 읽어보세요</h2></div>
+  <div class="related-grid">
+  {% for post in site.posts %}
+    {% if post.url != page.url and related_count < 3 %}
+      {% assign shared_tag = '' %}{% for tag in page.tags %}{% if post.tags contains tag %}{% assign shared_tag = tag %}{% endif %}{% endfor %}
+      {% assign shared_category = '' %}{% for category in page.categories %}{% if post.categories contains category %}{% assign shared_category = category %}{% endif %}{% endfor %}
+      {% if shared_tag != '' or shared_category != '' %}
+      <article class="related-card">{% if post.image %}<a class="related-thumb" href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"></a>{% endif %}<div class="related-copy"><p>{{ shared_tag | default: shared_category }} · 함께 읽기</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><span>{{ post.description | default: post.excerpt | strip_html | truncate: 96 }}</span></div></article>
+      {% assign related_count = related_count | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if related_count == 0 %}{% for post in site.posts %}{% if post.url != page.url and related_count < 3 %}<article class="related-card">{% if post.image %}<a class="related-thumb" href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"></a>{% endif %}<div class="related-copy"><p>최근 글</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><span>{{ post.description | default: post.excerpt | strip_html | truncate: 96 }}</span></div></article>{% assign related_count = related_count | plus: 1 %}{% endif %}{% endfor %}{% endif %}
+  </div>
+</section>
