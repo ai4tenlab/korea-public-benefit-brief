@@ -2,7 +2,7 @@
 title: "임산부 친환경 농산물 꾸러미 7월 본격 시행…24만원 상당 지원, 지역별 일정 확인"
 description: "농림축산식품부가 2026년 7월부터 임산부 친환경 농산물 꾸러미 사업을 본격 시행한다. 대상, 지원 내용, 신청 방법, 지역별 일정 확인점을 공식 출처 기준으로 정리했다."
 categories: [policy, benefit, family]
-author: "대한민국 공익정책 브리프"
+author: "정책과 시민 | Korea Public Benefit Brief"
 image: "/assets/images/thumbnails/2026-07-09-maternity-eco-produce-package-2026.png"
 image_alt: "친환경 농산물 꾸러미와 신청 정보를 확인하는 임산부 가정을 담은 가족 지원 썸네일"
 ---

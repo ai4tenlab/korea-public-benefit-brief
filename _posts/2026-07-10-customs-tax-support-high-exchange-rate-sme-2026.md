@@ -2,7 +2,7 @@
 title: "고환율 피해 중소기업 관세 납부기한 연장…최대 1년·6회 분할납부 신청 확인"
 description: "관세청이 고환율로 경영애로를 겪는 중소기업을 대상으로 관세 등 제세의 납부기한 연장, 분할납부, 수출환급금 신속 지급 등 세정지원 대상을 확대한다고 밝혔다."
 categories: [policy, benefit, sme]
-author: "대한민국 공익정책 브리프"
+author: "정책과 시민 | Korea Public Benefit Brief"
 image: "/assets/images/thumbnails/2026-07-10-customs-tax-support-high-exchange-rate-sme-2026.png"
 image_alt: "고환율 피해 중소기업 관세 세정지원 블로그 썸네일"
 ---

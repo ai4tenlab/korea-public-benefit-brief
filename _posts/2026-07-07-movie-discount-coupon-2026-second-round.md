@@ -2,7 +2,7 @@
 title: "8일부터 영화관 6000원 할인권 205만 장 배포…신청 전 확인할 점"
 description: "문화체육관광부와 영화진흥위원회가 2026년 7월 8일 오전 10시부터 영화 관람료 6000원 2차 할인권 약 205만 장을 배포한다. 대상, 사용 방법, 소진 조건, 확인처를 정리했다."
 categories: [policy, benefit, culture]
-author: "대한민국 공익정책 브리프"
+author: "정책과 시민 | Korea Public Benefit Brief"
 image: "/assets/images/thumbnails/2026-07-07-movie-discount-coupon-2026-second-round.png"
 image_alt: "영화관 로비에서 할인권을 확인하는 시민 가족을 담은 문화 혜택 썸네일"
 ---

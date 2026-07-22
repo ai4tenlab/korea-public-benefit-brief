@@ -2,7 +2,7 @@
 title: "숨은보험금 10조3000억 원 집중 안내…내보험찾아줌에서 조회·청구 확인"
 description: "금융위원회가 2026년 7월부터 숨은보험금 10조3000억 원에 대한 집중 안내를 시작한다. 내보험찾아줌 조회·청구 방법, 대상, 주의할 점을 공식 출처 기준으로 정리했다."
 categories: [policy, benefit, finance]
-author: "대한민국 공익정책 브리프"
+author: "정책과 시민 | Korea Public Benefit Brief"
 image: "/assets/images/thumbnails/2026-07-08-hidden-insurance-money-claim-guide.png"
 image_alt: "가정에서 숨은보험금 조회와 청구 방법을 함께 확인하는 가족을 담은 금융소비자 보호 썸네일"
 ---

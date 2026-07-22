@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification | escape }}">{% endif %}
   {% if site.naver_site_verification %}<meta name="naver-site-verification" content="{{ site.naver_site_verification | escape }}">{% endif %}
@@ -18,13 +18,16 @@
   <meta name="twitter:image" content="{{ page.image | absolute_url }}">
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"정책과 시민","alternateName":"Korea Public Benefit Brief","url":"{{ '/' | absolute_url }}","inLanguage":"ko-KR","description":"정책이 시민의 삶에 닿는 순간을 공식 출처로 확인하고 설명하는 공익정책 브리프"}
+  </script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="{{ '/' | relative_url }}">대한민국 공익정책 브리프</a>
+    <a class="brand" href="{{ '/' | relative_url }}">정책과 시민 <small>Korea Public Benefit Brief</small></a>
     <nav aria-label="주요 메뉴"><a href="{{ '/' | relative_url }}">홈</a><a class="nav-pill" href="{{ '/#latest' | relative_url }}">포스팅</a><a href="{{ '/about/' | relative_url }}">소개</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></nav>
   </header>
   <main class="container">{{ content }}</main>
-  <footer class="site-footer"><p>공식 출처 확인을 우선하는 공익 정보 아카이브 · Korea Public Benefit Brief</p></footer>
+  <footer class="site-footer"><p>정책이 시민의 삶에 닿는 순간을 공식 출처로 확인합니다 · Korea Public Benefit Brief</p></footer>
 </body>
 </html>
