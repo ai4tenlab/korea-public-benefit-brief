@@ -6,8 +6,8 @@ date: 2026-07-20 05:30:00 +0900
 last_modified_at: 2026-07-20 05:30:00 +0900
 categories: [policy, benefit, health]
 author: "4TENLAB Viki"
-image: "/assets/images/thumbnails/2026-07-20-129-welfare-consultation-survey-v2.png"
-image_alt: "창가의 밝은 실내에서 스마트폰으로 공공 상담 서비스 의견을 확인하는 한국 시민"
+image: "/assets/images/thumbnails/2026-07-20-129-welfare-consultation-survey-v3.png"
+image_alt: "창가의 밝은 집 안에서 스마트폰으로 공공 상담 서비스 개선 의견을 확인하는 한국 시민"
 ---
 
 ## 3줄 요약
