@@ -1,4 +1,5 @@
 import importlib.util
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -51,6 +52,18 @@ class RelatedPostsRendererTests(unittest.TestCase):
         self.assertIn("이 글과 함께 읽어보세요", section)
         self.assertIn('href="/korea-public-benefit-brief/policy/notice/2026/07/22/recent/"', section)
         self.assertIn("최근 글", section)
+
+    def test_filters_out_candidates_not_present_in_pages_worktree(self):
+        renderer = load_module("ensure-related-posts.py", "related_renderer")
+        public = {"url": "/policy/benefit/2026/07/22/public/", "title": "공개 글"}
+        unpublished = {"url": "/policy/benefit/2026/07/23/unpublished/", "title": "미배포 글"}
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            target = root / "policy/benefit/2026/07/22/public/index.html"
+            target.parent.mkdir(parents=True)
+            target.write_text("<html></html>", encoding="utf-8")
+            visible = renderer.public_posts([public, unpublished], root)
+        self.assertEqual(visible, [public])
 
 
 if __name__ == "__main__":

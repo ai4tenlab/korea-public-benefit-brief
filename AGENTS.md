@@ -30,7 +30,8 @@ Never invent research, terms, data, or links to fill an empty block. Keep an int
 ```bash
 python scripts/ensure-related-posts.py \
   _posts/YYYY-MM-DD-slug.md \
-  ../korea-public-benefit-brief-pages/<category-path>/YYYY/MM/DD/slug/index.html
+  ../korea-public-benefit-brief-pages/<category-path>/YYYY/MM/DD/slug/index.html \
+  --pages-root ../korea-public-benefit-brief-pages
 ```
 
 4. Run `scripts/verify-public-benefit-post.py` locally and publicly. Both `SECTION_이 글과 함께 읽어보세요` and `RELATED_POST_LINK` must PASS.

@@ -68,6 +68,15 @@ def card(post: dict[str, object], label: str) -> str:
     )
 
 
+def public_posts(candidates: list[dict[str, object]], pages_root: Path) -> list[dict[str, object]]:
+    """Keep only candidates whose rendered page already exists in gh-pages."""
+    return [
+        post
+        for post in candidates
+        if (pages_root / str(post["url"]).strip("/") / "index.html").is_file()
+    ]
+
+
 def build_related_section(current: dict[str, object], candidates: list[dict[str, object]], limit: int = 3) -> str:
     """Return required related-reading markup, including deterministic fallback."""
     current_tags = set(current.get("tags", []))
@@ -110,10 +119,11 @@ def main() -> int:
     parser.add_argument("post", type=Path, help="source Markdown post")
     parser.add_argument("rendered_index", type=Path, help="legacy gh-pages index.html")
     parser.add_argument("--posts-dir", type=Path, default=None, help="source _posts directory")
+    parser.add_argument("--pages-root", type=Path, required=True, help="root of the checked-out gh-pages worktree")
     args = parser.parse_args()
     posts_dir = args.posts_dir or args.post.parent
     current = parse_post(args.post)
-    candidates = [parse_post(path) for path in posts_dir.glob("*.md")]
+    candidates = public_posts([parse_post(path) for path in posts_dir.glob("*.md")], args.pages_root)
     section = build_related_section(current, candidates)
     rendered = args.rendered_index.read_text(encoding="utf-8")
     updated = inject_related_section(rendered, section)
