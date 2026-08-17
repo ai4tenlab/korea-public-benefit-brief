@@ -66,5 +66,31 @@ class RelatedPostsRendererTests(unittest.TestCase):
         self.assertEqual(visible, [public])
 
 
+class GhPagesPreflightTests(unittest.TestCase):
+    def test_accepts_complete_static_pages_tree(self):
+        preflight = load_module("preflight-gh-pages-release.py", "pages_preflight")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in (".nojekyll", "index.html", "feed.xml", "sitemap.xml"):
+                (root / name).write_text("ok", encoding="utf-8")
+            checks = preflight.build_checks(root)
+        results = {name: ok for name, ok, _ in checks}
+        self.assertTrue(all(results.values()))
+
+    def test_rejects_runtime_artifacts_and_missing_nojekyll(self):
+        preflight = load_module("preflight-gh-pages-release.py", "pages_preflight")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in ("index.html", "feed.xml", "sitemap.xml"):
+                (root / name).write_text("ok", encoding="utf-8")
+            cache = root / "scripts" / "__pycache__"
+            cache.mkdir(parents=True)
+            (cache / "renderer.cpython-311.pyc").write_bytes(b"compiled")
+            checks = preflight.build_checks(root)
+        results = {name: ok for name, ok, _ in checks}
+        self.assertFalse(results["REQUIRED_.nojekyll"])
+        self.assertFalse(results["NO_RUNTIME_ARTIFACTS"])
+
+
 if __name__ == "__main__":
     unittest.main()

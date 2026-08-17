@@ -35,7 +35,15 @@ python scripts/ensure-related-posts.py \
 ```
 
 4. Run `scripts/verify-public-benefit-post.py` locally and publicly. Both `SECTION_이 글과 함께 읽어보세요` and `RELATED_POST_LINK` must PASS.
-5. If either check fails, do not push `gh-pages`, announce publication, or send the internal newsletter.
+5. Before staging the rendered worktree, run the static-release preflight:
+
+```bash
+python scripts/preflight-gh-pages-release.py ../korea-public-benefit-brief-pages
+```
+
+It requires `.nojekyll`, `index.html`, `feed.xml`, and `sitemap.xml`, and blocks generated runtime artifacts such as `__pycache__` and `.pyc` files.
+6. Stage the complete intended artifact, review `git diff --cached`, create one release commit, then make **one** `git push origin HEAD:gh-pages`. Do not push a post and follow it with cleanup or correction commits: GitHub Pages cancels the earlier deployment and creates misleading red runs.
+7. If any preflight or verifier check fails, do not push `gh-pages`, announce publication, or send the internal newsletter.
 
 ## Safety and evidence
 
