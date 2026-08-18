@@ -1,20 +1,33 @@
 ---
 layout: page
-title: 정책자금 안내
+title: 정책자금
+description: "소상공인·중소기업·예비창업자가 정책자금과 창업지원 공고를 공식 출처에서 확인하는 방법과 최신 브리프를 안내합니다."
 permalink: /policy-funding/
-description: "소상공인·중소기업·예비창업자가 정책자금과 창업지원 공고를 공식 출처에서 확인하는 방법을 정리합니다."
 ---
 
-## 정책자금, 먼저 공식 공고부터 확인하세요
+<p class="eyebrow">FOR BUSINESS</p>
+# 정책자금
 
-정책자금은 보조금, 융자, 보증, 이차보전, 바우처처럼 지원 방식이 다릅니다. 지원을 받는다고 단정하기보다 **대상·업력·업종·지역·마감일·신청 경로**를 공식 공고에서 먼저 확인해야 합니다.
+소상공인·1인기업·예비창업자·중소기업을 위한 융자·지원금·보증 정책을 다룹니다. 정책자금은 보조금, 융자, 보증, 이차보전, 바우처처럼 지원 방식이 다르므로 **대상·업력·업종·지역·마감일·신청 경로**를 공식 공고에서 먼저 확인해야 합니다.
 
-이 페이지는 특정 사업의 선정이나 대출을 보장하지 않습니다. 매일 발행하는 정책자금 브리프는 원문 공고를 바탕으로, 사업자가 다음 행동을 판단할 수 있도록 정리합니다.
+## 최신 정책자금 브리프
 
-- 내 사업이 검토 대상인지
-- 무엇을 지원하는지와 상환·보증 여부
-- 언제까지, 어디에서 신청하는지
-- 어떤 조건과 제외 기준을 다시 확인해야 하는지
+<div class="archive-posts">
+{% assign funding_count = 0 %}
+{% for post in site.posts %}
+  {% if post.categories contains 'funding' %}
+  <article class="post-item">
+    {% if post.image %}<a class="post-thumb-link" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"></a>{% endif %}
+    <div class="post-copy"><time>{{ post.date | date: "%Y.%m.%d" }}</time><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.excerpt | strip_html | truncate: 150 }}</p></div>
+  </article>
+  {% assign funding_count = funding_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+</div>
+
+{% if funding_count == 0 %}
+<div class="empty-state"><strong>공식 공고를 검증하고 있습니다.</strong><p>대상·기한·신청 경로를 확인할 수 있는 정책자금 공고만 발행합니다. 확인 전 발표성 자료나 일반 금융 기사는 이 목록에 섞지 않습니다.</p></div>
+{% endif %}
 
 ## 매일 확인하는 정책자금 분야
 

@@ -23,13 +23,13 @@
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"정책과 시민","alternateName":"Korea Public Benefit Brief","url":"{{ '/' | absolute_url }}","inLanguage":"ko-KR","description":"정책이 시민의 삶에 닿는 순간을 공식 출처로 확인하고 설명하는 공익정책 브리프"}
+  {"@context":"{{ 'https://schema' | append: '.org' }}","@type":"WebSite","name":"정책과 시민","alternateName":"Korea Public Benefit Brief","url":"{{ '/' | absolute_url }}","inLanguage":"ko-KR","description":"정책이 시민의 삶에 닿는 순간을 공식 출처로 확인하고 설명하는 공익정책 브리프"}
   </script>
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="{{ '/' | relative_url }}">정책과 시민 <small>Korea Public Benefit Brief</small></a>
-    <nav aria-label="주요 메뉴"><a href="{{ '/' | relative_url }}">홈</a><a class="nav-pill" href="{{ '/#latest' | relative_url }}">포스팅</a><a href="{{ '/policy-funding/' | relative_url }}">정책자금</a><a href="{{ '/about/' | relative_url }}">소개</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></nav>
+    <nav aria-label="주요 메뉴"><a href="{{ '/' | relative_url }}">홈</a><a class="nav-pill" href="{{ '/living-policy/' | relative_url }}">생활정책·혜택</a><a href="{{ '/policy-funding/' | relative_url }}">정책자금</a><a href="{{ '/about/' | relative_url }}">소개</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></nav>
   </header>
   <main class="container">{{ content }}</main>
   <footer class="site-footer"><p>정책이 시민의 삶에 닿는 순간을 공식 출처로 확인합니다 · Korea Public Benefit Brief</p></footer>
