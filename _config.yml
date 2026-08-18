@@ -5,6 +5,9 @@ baseurl: "/korea-public-benefit-brief"
 google_site_verification: "6IbvE6STizsI0a21ulmBwJIxUvzBW-VDXOFI_i4fETs"
 lang: ko-KR
 timezone: Asia/Seoul
+publisher:
+  name: "4TENLAB"
+  url: "https://ai4tenlab.github.io/korea-public-benefit-brief/"
 permalink: /:categories/:year/:month/:day/:title/
 markdown: kramdown
 kramdown:

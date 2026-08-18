@@ -45,6 +45,21 @@ It requires `.nojekyll`, `index.html`, `feed.xml`, and `sitemap.xml`, and blocks
 6. Stage the complete intended artifact, review `git diff --cached`, create one release commit, then make **one** `git push origin HEAD:gh-pages`. Do not push a post and follow it with cleanup or correction commits: GitHub Pages cancels the earlier deployment and creates misleading red runs.
 7. If any preflight or verifier check fails, do not push `gh-pages`, announce publication, or send the internal newsletter.
 
+## Policy-funding release gate
+
+For every new post categorized with `funding`:
+
+1. Add `official_sources` in front matter with at least two official URLs when independent confirmation is available.
+2. Put an official source link in the explanatory body next to at least one decision-critical claim. A source list only at the end is not enough.
+3. Run:
+
+```bash
+python scripts/validate-policy-funding-post.py _posts/YYYY-MM-DD-slug.md
+```
+
+4. The four checks `POLICY_FUNDING_CATEGORY`, `OFFICIAL_SOURCE_COUNT`, `TRUSTED_OFFICIAL_SOURCES`, and `INLINE_OFFICIAL_EVIDENCE` must pass before render or release.
+5. Daily operation means daily discovery and publication. Do not publish an unverified announcement simply to meet a quota.
+
 ## Safety and evidence
 
 - Preserve the public-policy evidence boundary: do not add health, eligibility, benefit, or timing claims beyond official sources.
