@@ -14,6 +14,8 @@ class ContentLaneTemplateTests(unittest.TestCase):
         self.assertIn("if post.categories contains 'funding'", home)
         self.assertIn("living_count < 3", home)
         self.assertIn("funding_count < 3", home)
+        self.assertNotIn("전체 최신 업데이트", home)
+        self.assertNotIn("ALL UPDATES", home)
 
     def test_navigation_links_to_living_policy_archive(self):
         layout = (ROOT / "_layouts" / "default.html").read_text(encoding="utf-8")

@@ -73,15 +73,3 @@ description: "시민의 생활정책·혜택과 사업자를 위한 정책자금
     {% endif %}
   </div>
 </section>
-
-<section id="latest" class="section all-updates">
-  <p class="eyebrow">ALL UPDATES</p>
-  <h2>전체 최신 업데이트</h2>
-  <div class="post-list compact-posts">
-    {% for post in site.posts limit: 6 %}
-    <article class="post-item">
-      <div class="post-copy"><time>{{ post.date | date: "%Y.%m.%d" }}</time><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3></div>
-    </article>
-    {% endfor %}
-  </div>
-</section>
