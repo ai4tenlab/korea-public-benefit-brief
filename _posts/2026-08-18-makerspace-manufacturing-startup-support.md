@@ -101,8 +101,3 @@ A. 공고는 제조 창업 기반 예비·초기 창업자와 제조기업을 �
 
 - [기업마당 상세 공고 — 2026년 제조전문형 메이커스페이스 제조창업지원 양산연계 지원프로그램 모집 공고](https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125549): 공고명, 대상, 2026년 8월 12일~31일 기간, 단계별 재료·제조 지원 및 컨설팅, 이메일 접수·문의처를 확인했습니다.
 - [기업마당 지원사업 공고 목록](https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do): 2026년 8월 18일 등록 상태와 공고 목록의 신청 기간 표기를 교차 확인했습니다.
-
-## 이 글과 함께 읽어보세요
-
-- [소상공인 대출심사, 8월 말부터 매출·상권 정보도 함께 봅니다](/korea-public-benefit-brief/policy/benefit/finance/2026/07/28/small-business-scb-credit-pilot/)
-- [혜택 자동신청, 올해 시범운영 전에 확인할 것은 무엇인가요](/korea-public-benefit-brief/policy/benefit/digital/2026/08/07/ai-benefit-auto-application/)
