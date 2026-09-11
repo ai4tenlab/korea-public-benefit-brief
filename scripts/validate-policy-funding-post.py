@@ -19,6 +19,7 @@ TRUSTED_OFFICIAL_HOSTS = (
     "bizinfo.go.kr",
     "k-startup.go.kr",
     "semas.or.kr",
+    "sbiz.or.kr",
     "kosmes.or.kr",
     "kibo.or.kr",
     "kodit.co.kr",
